@@ -32,7 +32,7 @@
         }
         .navbar-nav .nav-link {
             color: #fff; /* White text color */
-            font-weight: bold;
+            font-weight: normal; /* Normal weight */
         }
         .navbar-nav .nav-link:hover {
             color: #007bff; /* Hover color */
@@ -157,10 +157,85 @@
         }
 
         /* Media Queries for Responsive Design */
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .header {
-                padding-left: 15%;
-                padding-right: 15%;
+                height: 40vh; /* Adjust height for smaller screens */
+            }
+            .header h1 {
+                font-size: 2em; /* Decrease font size for smaller screens */
+            }
+            .header p {
+                font-size: 1em; /* Decrease font size for smaller screens */
+            }
+            .header .btn {
+                padding: 8px 16px; /* Adjust button padding for smaller screens */
+                font-size: 1em; /* Decrease font size for smaller screens */
+            }
+            .navbar-collapse {
+                max-height: none !important; /* Remove max-height restriction */
+            }
+            .navbar {
+                background-color: #343a40; /* Dark background color */
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+            }
+            .navbar-nav {
+                text-align: center; /* Center align the links */
+                margin: 0 auto;
+                display: block;
+                max-height: none !important; /* Remove max-height restriction */
+            }
+            .navbar-toggler {
+                border: none; /* Remove border */
+                outline: none; /* Remove outline */
+                color: #fff; /* White text color */
+                font-size: 1.2em; /* Adjust font size */
+                background-color: transparent; /* Transparent background */
+                position: absolute; /* Position absolutely */
+                right: 15px; /* Adjust right position */
+                top: 15px; /* Adjust top position */
+                padding: 0; /* Remove padding */
+                cursor: pointer; /* Pointer cursor */
+            }
+            .navbar-toggler:hover {
+                color: #007bff; /* Hover color */
+            }
+            .navbar-toggler-icon {
+                width: 30px; /* Adjust icon width */
+                height: 3px; /* Adjust icon height */
+                background-color: #fff; /* White background color */
+                display: block; /* Display as block element */
+                position: relative; /* Position relatively */
+                transition: background-color 0.3s; /* Smooth transition */
+            }
+            .navbar-toggler-icon::before,
+            .navbar-toggler-icon::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                display: block;
+                position: absolute;
+                transition: transform 0.3s, background-color 0.3s;
+            }
+            .navbar-toggler-icon::before {
+                top: -10px;
+            }
+            .navbar-toggler-icon::after {
+                bottom: -10px;
+            }
+            .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+                transform: translateY(10px) rotate(45deg);
+            }
+            .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+            .navbar-toggler.collapsed .navbar-toggler-icon::before,
+            .navbar-toggler.collapsed .navbar-toggler-icon::after {
+                transform: none;
             }
         }
     </style>
@@ -266,3 +341,4 @@
     </script>
 </body>
 </html>
+
