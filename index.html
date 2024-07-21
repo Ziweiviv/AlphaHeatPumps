@@ -21,69 +21,7 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        .navbar {
-            background-color: #343a40; /* Dark background color */
-            transition: background-color 0.3s;
-        }
-        .navbar-brand {
-            color: #fff; /* White text color */
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-        .navbar-nav .nav-link {
-            color: #fff; /* White text color */
-            font-weight: normal; /* Normal weight */
-        }
-        .navbar-nav .nav-link:hover {
-            color: #007bff; /* Hover color */
-        }
-        .navbar-toggler {
-            border-color: #fff; /* White border color */
-        }
-        .navbar-toggler-icon {
-            background-color: #fff; /* White background color for icon */
-        }
-        .navbar.scrolled {
-            background-color: #343a40 !important;
-        }
-        .header {
-            background: url('banner.jpg') no-repeat center center/cover;
-            background-size: cover;
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 70px; /* Adjust padding to ensure content is below navbar */
-        }
-        .header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .header-content {
-            z-index: 1;
-            animation: fadeInDown 1s ease-in-out;
-            padding: 20px;
-            max-width: 800px;
-            color: #fff;
-        }
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+
         .header h1 {
             font-size: 3em;
             margin: 0;
@@ -108,8 +46,6 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            display: grid;
-            gap: 20px;
         }
         .services {
             display: grid;
@@ -156,123 +92,66 @@
             margin-top: 20px;
         }
 
-        /* Media Queries for Responsive Design */
         @media (max-width: 768px) {
             .header {
-                height: 40vh; /* Adjust height for smaller screens */
+                text-align: center;
             }
-            .header h1 {
-                font-size: 2em; /* Decrease font size for smaller screens */
-            }
-            .header p {
-                font-size: 1em; /* Decrease font size for smaller screens */
-            }
-            .header .btn {
-                padding: 8px 16px; /* Adjust button padding for smaller screens */
-                font-size: 1em; /* Decrease font size for smaller screens */
-            }
-            .navbar-collapse {
-                max-height: none !important; /* Remove max-height restriction */
-            }
-            .navbar {
-                background-color: #343a40; /* Dark background color */
-                position: fixed;
+            .header img {
                 width: 100%;
-                top: 0;
-                left: 0;
-                z-index: 1000;
+                height: auto;
             }
-            .navbar-nav {
-                text-align: center; /* Center align the links */
-                margin: 0 auto;
-                display: block;
-                max-height: none !important; /* Remove max-height restriction */
-            }
-            .navbar-toggler {
-                border: none; /* Remove border */
-                outline: none; /* Remove outline */
-                color: #fff; /* White text color */
-                font-size: 1.2em; /* Adjust font size */
-                background-color: transparent; /* Transparent background */
-                position: absolute; /* Position absolutely */
-                right: 15px; /* Adjust right position */
-                top: 15px; /* Adjust top position */
-                padding: 0; /* Remove padding */
-                cursor: pointer; /* Pointer cursor */
-            }
-            .navbar-toggler:hover {
-                color: #007bff; /* Hover color */
-            }
-            .navbar-toggler-icon {
-                width: 30px; /* Adjust icon width */
-                height: 3px; /* Adjust icon height */
-                background-color: #fff; /* White background color */
-                display: block; /* Display as block element */
-                position: relative; /* Position relatively */
-                transition: background-color 0.3s; /* Smooth transition */
-            }
-            .navbar-toggler-icon::before,
-            .navbar-toggler-icon::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background-color: #fff;
-                display: block;
-                position: absolute;
-                transition: transform 0.3s, background-color 0.3s;
-            }
-            .navbar-toggler-icon::before {
-                top: -10px;
-            }
-            .navbar-toggler-icon::after {
-                bottom: -10px;
-            }
-            .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
-                transform: translateY(10px) rotate(45deg);
-            }
-            .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
-                transform: translateY(-10px) rotate(-45deg);
-            }
-            .navbar-toggler.collapsed .navbar-toggler-icon::before,
-            .navbar-toggler.collapsed .navbar-toggler-icon::after {
-                transform: none;
+            .header .text-content {
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Alpha Heat Pumps</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#social">Social</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-primary" href="contact.html">Get a Free Quote</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="logonav.jpg" alt="Alpha Heat Pumps Logo" style="max-height: 40px; vertical-align: middle;">
+                Alpha Heat Pumps
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social">Social</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="contact.html">Get a Free Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
     <!-- Header Section -->
-    <div class="header">
-        <div class="header-content">
-            <h1>Welcome to Alpha Heat Pumps</h1>
-            <p>Your trusted partner in heat pump and air conditioning solutions</p>
-            <a href="contact.html" class="btn">Get a Free Quote</a>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="banner.jpg" alt="Banner Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <div class="text-content">
+                        <h1>Welcome to Alpha Heat Pumps</h1>
+                        <p class="lead mb-4">Happiness is found in the embrace of refreshing air conditioning on a sweltering summer day and the comforting warmth it brings during winter's embrace.</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
+    
 
     <!-- Main Content -->
     <div class="content">
@@ -318,8 +197,8 @@
         
         <div class="social" id="social">
             <h2>Connect with Us</h2>
-            <a href="https://www.facebook.com/AlphaheatpumpsNZ" target="_blank" class="fab fa-facebook"></a>
-            <a href="https://www.instagram.com/AlphaheatpumpsNZ" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.facebook.com/AlphaheatpumpsNZ" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/AlphaheatpumpsNZ" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
     <div class="footer">
@@ -341,4 +220,3 @@
     </script>
 </body>
 </html>
-
