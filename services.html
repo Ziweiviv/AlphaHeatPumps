@@ -31,105 +31,33 @@
             padding: 10px 0;
         }
 
-        .header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner.jpg') no-repeat center center/cover;
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 3.5em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .header p {
-            font-size: 1.5em;
-            margin: 20px 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-
-        .header .btn {
-            background: #007bff;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .header .btn:hover {
-            background: #0056b3;
-            transform: scale(1.05);
-        }
-
-        .promo-image img {
+        .article-img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 1rem;
         }
 
-        .promo-image img:hover {
-            transform: scale(1.05);
-        }
-
-        .promo-text {
-            text-align: center;
-        }
-
-        .promo-text h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .promo-text p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .content {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        .services {
-            margin-bottom: 40px;
-        }
-
-        .services h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            color: #007bff;
-        }
-
-        .services .card {
+        .article {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
             background-color: #fff;
-            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .services .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        .article h2 {
+            margin-top: 0;
         }
 
-        .services .card-title {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #007bff;
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
         }
 
-        .services .card-text {
-            font-size: 1.1em;
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
         }
 
         .footer {
@@ -156,59 +84,7 @@
             color: #3498db;
         }
 
-        .contact-form-container {
-            margin-top: 80px; /* Adjust to ensure form is not hidden */
-        }
-
-        .contact-form-container h2 {
-            margin-bottom: 30px;
-        }
-
-        .contact-form-container .form-group {
-            margin-bottom: 15px;
-        }
-
-        .contact-form-container .form-control {
-            border-radius: 0.25rem;
-            box-shadow: none;
-            border-color: #ccc;
-        }
-
-        .contact-form-container .btn-primary {
-            background-color: #007bff;
-            border: none;
-            border-radius: 0.25rem;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form-container .btn-primary:hover {
-            background-color: #0056b3;
-        }
-
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5em;
-            }
-
-            .header p {
-                font-size: 1.2em;
-            }
-
-            .header .btn {
-                padding: 10px 20px;
-                font-size: 1em;
-            }
-
-            .promo-text h2 {
-                font-size: 1.8em;
-            }
-
-            .promo-text p {
-                font-size: 1em;
-            }
-
             .footer .container {
                 flex-direction: column;
                 align-items: center;
@@ -219,7 +95,6 @@
                 text-align: center;
             }
         }
-        
     </style>
 </head>
 <body>
@@ -253,52 +128,45 @@
         </div>
     </nav>
 
-
     <!-- Services Section -->
-    <div class="container services mt-5">
-        <h2>Our Services</h2>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Heat Pump Installations</h5>
-                        <p class="card-text">Professional installations for your home or office.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Ducted Heat Pump Installations</h5>
-                        <p class="card-text">Comprehensive ducted installation services.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Air Conditioning Installations</h5>
-                        <p class="card-text">Efficient air conditioning solutions.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Maintenance Services</h5>
-                        <p class="card-text">Regular maintenance to keep your systems running smoothly.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Deep Cleans</h5>
-                        <p class="card-text">Thorough cleaning for optimal performance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Our Services</h1>
+
+        <!-- Services Articles -->
+        <article class="article">
+            
+            <h2>Heat Pump Installations</h2>
+            <p>Heat Pump Installations involve setting up a heat pump system in your home or office. A heat pump transfers heat between the inside and outside of a building, providing both heating and cooling. Professional installation is crucial to ensure that the system operates efficiently, maintains a consistent temperature, and reduces energy costs. Proper installation also extends the lifespan of the unit and ensures it meets safety standards.</p>
+            <a href="contact.html" class="btn btn-primary">Contact to Book Now</a>
+        </article>
+
+        <article class="article">
+           
+            <h2>Ducted Heat Pump Installations</h2>
+            <p>Ducted Heat Pump Installations are for systems that use ducts to distribute heated or cooled air throughout multiple rooms or areas. This type of installation provides uniform temperature control across the building. Ensuring a professional installation is key to optimizing airflow, minimizing energy loss, and achieving efficient climate control in all areas served by the ducted system.</p>
+            <a href="contact.html" class="btn btn-primary">Contact to Book Now</a>
+        </article>
+
+        <article class="article">
+         
+            <h2>Air Conditioning Installations</h2>
+            <p>Air Conditioning Installations involve setting up air conditioning units that cool indoor spaces. Proper installation of an air conditioner ensures it works efficiently, delivers effective cooling, and maintains indoor comfort. A professional installation helps avoid problems like inadequate cooling, high energy consumption, or potential system breakdowns.</p>
+            <a href="contact.html" class="btn btn-primary">Contact to Book Now</a>
+        </article>
+
+        <article class="article">
+      
+            <h2>Maintenance Services</h2>
+            <p>Maintenance Services are essential for keeping your heating and cooling systems in good working condition. Regular maintenance includes inspecting, cleaning, and servicing your systems to ensure they run smoothly. This helps prevent breakdowns, improves energy efficiency, and extends the lifespan of your equipment. It also allows for early detection of potential issues, which can reduce the risk of costly repairs.</p>
+            <a href="contact.html" class="btn btn-primary">Contact to Book Now</a>
+        </article>
+
+        <article class="article">
+     
+            <h2>Deep Cleans</h2>
+            <p>Deep Cleans involve a thorough cleaning of your heating and cooling systems to remove dust, debris, and other contaminants. This service ensures that your system performs at its best, improves air quality, and maintains efficient operation. Regular deep cleans can prevent problems like reduced airflow, unpleasant odors, and increased energy usage.</p>
+            <a href="contact.html" class="btn btn-primary">Contact to Book Now</a>
+        </article>
     </div>
 
     <!-- Social Media Section -->
@@ -334,9 +202,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-
-    </script>
 </body>
 </html>
-
