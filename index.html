@@ -10,13 +10,14 @@
     <link rel="icon" type="image/x-icon" href="logo.jpg" />
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap">
 
     <!-- FontAwesome CSS for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Custom CSS -->
     <style>
         body {
-            font-family: 'Arial', 'Helvetica Neue', 'Segoe UI', Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -25,17 +26,24 @@
         .navbar {
             transition: background-color 0.3s, padding 0.3s;
         }
-        .navbar.scrolled {
-            background-color: #333;
-            padding: 10px 0;
-        }
-        .navbar-brand-text {
-    font-family: 'Helvetica Neue Condensed', 'Arial Narrow', 'Segoe UI Semilight', Verdana, sans-serif;
+        .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 10px; /* Space between image and text */
+}
+
+.navbar-brand-text {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: -0.5px;
     font-weight: bold;
     font-size: 1em;
     color: #fff;
-    letter-spacing: -0.5px;
 }
+
 
 
         .header {
