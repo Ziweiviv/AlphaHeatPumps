@@ -23,6 +23,20 @@
             background-color: #f4f4f4;
             color: #333;
         }
+        .navbar {
+            transition: background-color 0.3s, padding 0.3s;
+        }
+        .navbar.scrolled {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        .navbar-brand-text {
+            font-family: 'Arial Narrow', 'Segoe UI Semilight', 'Helvetica Neue', Verdana, sans-serif;
+            letter-spacing: -0.5px;
+            font-weight: bold;
+            font-size: 1em;
+            color: #fff;
+        }
 
 
         .header {
@@ -185,7 +199,44 @@
         .text-center {
             text-align: center;
         }
+        @media (max-width: 768px) {
+     
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .header p {
+                font-size: 1.2em;
+            }
+            .header .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+            .promo-text h2 {
+                font-size: 1.8em;
+            }
+            .promo-text p {
+                font-size: 1em;
+            }
+            .footer .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer .footer-col {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+        @media (max-width: 576px) {
+    .navbar-toggler {
+        font-size: 0.8em; /* Reduce the font size of the toggle button */
+        padding: 0.25rem 0.5rem; /* Reduce the padding */
+    }
 
+    .navbar-toggler-icon {
+        width: 20px; /* Adjust the width of the icon */
+        height: 20px; /* Adjust the height of the icon */
+    }
+}
     </style>
 </head>
 <body>
