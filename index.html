@@ -24,41 +24,32 @@
             color: #333;
         }
         .navbar {
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-between; /* Distribute space between items */
-            align-items: center; /* Center items vertically */
-            transition: background-color 0.3s, padding 0.3s;
-            padding: 0 15px; /* Adjust padding if necessary */
+            
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Distribute space between items */
+        align-items: center; /* Center items vertically */
+        transition: background-color 0.3s, padding 0.3s;
+    
         }
         .navbar-brand {
             display: flex;
             align-items: center;
-            height: 60px; /* Ensure a consistent height for alignment */
         }
         .navbar-brand img {
             max-height: 40px; /* Adjust the maximum height of the logo image */
             height: auto; /* Maintain aspect ratio */
             width: auto; /* Maintain aspect ratio */
             margin-right: 10px; /* Space between image and text */
+            vertical-align: middle; /* Ensure vertical alignment */
         }
         .navbar-brand-text {
             font-family: 'Arial Narrow', Arial, sans-serif;
             letter-spacing: -0.5px;
-
+            font-weight: bold;
             font-size: 1em;
             color: #fff;
-            line-height: 40px; /* Align text with image */
-        }
-        .navbar-toggler {
-            font-size: 0.8em; /* Adjust the font size of the toggle button */
-            padding: 0.25rem 0.5rem; /* Reduce padding */
-        }
-        .navbar-toggler-icon {
-            width: 20px; /* Adjust the width of the icon */
-            height: 20px; /* Adjust the height of the icon */
         }
     
-        /* Other styles */
         .header {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner.jpg') no-repeat center center/cover;
             color: #fff;
@@ -221,14 +212,17 @@
         }
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             .header p {
+                font-size: 1.2em;
+            }
+            .header .btn {
+                padding: 10px 20px;
                 font-size: 1em;
             }
-   
             .promo-text h2 {
-                font-size: 1.3em;
+                font-size: 1.8em;
             }
             .promo-text p {
                 font-size: 1em;
@@ -244,27 +238,20 @@
             .navbar-brand img {
                 max-height: 30px; /* Adjust for smaller screens */
             }
-            .navbar-brand-text {
-                font-size: 0.9em; /* Adjust font size for smaller screens */
-            }
         }
     
         @media (max-width: 576px) {
             .navbar-toggler {
                 font-size: 0.8em; /* Reduce the font size of the toggle button */
-                padding: 0.2rem 0.4rem; /* Reduce the padding */
+                padding: 0.1rem 0.2rem; /* Reduce the padding */
             }
     
             .navbar-toggler-icon {
                 width: 20px; /* Adjust the width of the icon */
                 height: 20px; /* Adjust the height of the icon */
             }
-            .navbar-brand-text {
-                font-size: 0.8em; /* Further adjust font size for extra small screens */
-            }
         }
     </style>
-    
     
 </head>
 <body>
