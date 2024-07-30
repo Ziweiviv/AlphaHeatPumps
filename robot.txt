@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /private/  # Adjust this if you have any directories you want to exclude
+Disallow:
